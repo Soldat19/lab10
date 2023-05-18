@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns:25% 25% 1fr 20%;
+  grid-template-rows: 30% 20% 30% 20%;
+  gap: 3px;
+}
+
+.block {
+  border: 1px solid #fff;
+}
+
+/* Адаптивні стилі */
+
+@media (max-width: 499px) {
+  .wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+
+@media (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (min-width: 750px) {
+  .wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: 950px) {
+  .wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+#grid { 
+  display: grid;
+  grid-template-rows: 30% 20% 30% 20%;
+  grid-template-columns: 25% 25% 1fr 20%;
+  grid-gap: 10px;
+  }
+#grid > div {
+  padding: .5em;
+  background: gold;
+  text-align: center;
